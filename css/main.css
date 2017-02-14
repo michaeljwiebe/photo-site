@@ -1,0 +1,960 @@
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  color: white;
+}
+
+h1, h2 {
+  margin: 3px 0 0 0;
+  font-family: Ariel, sans-serif;
+  width: 100vw;
+  text-align: center;
+  position: fixed;
+  text-shadow: 3px 3px 2px black;
+  opacity: 0.8;
+}
+
+div {
+  border: 1px solid rgba(0, 0, 0, .5);
+}
+
+.background-photo {
+  width: 100vw;
+  height: 180vh;
+  background-size: cover;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    opacity: 0.8;
+}
+
+/* Float the list items side by side */
+.nav li {float: left;}
+
+/* Style the links inside the list items */
+.nav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 0px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    min-width: 24px;
+    height: 20px;
+}
+
+.icon > a {
+  width: 48px;
+}
+
+.nav li a:hover {background-color: #555;}
+
+/*hides hamburger by default (> 680px width)*/
+.nav li.icon {display: none;}
+
+#first-nav {
+  margin-left: 5px;
+}
+
+#last-nav {
+  margin-right: 5px;
+}
+
+#contact {
+  width: 100vw;
+  background-color: #333;
+}
+
+#contact-photo {
+    margin: 0;
+}
+
+figcaption {
+  width: 100vw;
+  text-align: center;
+  margin-top: 60px;
+}
+
+@media only screen and (orientation: portrait) {
+  #contact {
+    height: 100vh;
+  }
+  #contact-photo {
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+
+@media screen and (max-width: 700px) and (orientation: portrait) {
+  .nav li {display: none;}
+  .nav li.icon {
+    float: right;
+    display: inline-block;
+    position: fixed;
+    right: 43.5%;
+    bottom: 5px;
+    width: 48px;
+  }
+  .nav.responsive {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 5px;
+    width: 100vw;
+  }
+  .nav.responsive li.icon {
+    position: fixed;
+    bottom: 5px;
+    text-indent: 15px;
+    width: 48px;
+  }
+  .nav.responsive li {
+    display: inline;
+  }
+  .nav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 701px) and (orientation: portrait) {
+  .nav li {display: none;}
+  .nav li a {
+      font-size: 40px;
+      min-width: 72px;
+      height: 40px;
+      padding-top: 5px;
+      padding-bottom: 20px;
+  }
+
+  .icon > a {
+    width: 48px;
+  }
+
+  .nav li.icon {
+    float: right;
+    display: inline-block;
+    position: fixed;
+    right: 50%;
+    bottom: 5px;
+    width: 48px;
+  }
+  .nav.responsive {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 5px;
+    width: 100vw;
+  }
+  .nav.responsive li.icon {
+    position: fixed;
+    bottom: 5px;
+    text-indent: 18px;
+    width: 48px;
+  }
+  .nav.responsive li {
+    display: inline;
+  }
+  .nav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+/*heading and nav media queries*/
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  h1 {
+    font-size: 1.4em;
+    bottom: 80px;
+  }
+  h2 {
+    font-size: 1em;
+    bottom: 60px;
+  }
+
+  .nav {
+    position: fixed;
+  }
+
+  #contact {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 700px) and (orientation: portrait) {
+  h1 {
+    font-size: 2.4em;
+    bottom: 100px;
+  }
+  h2 {
+    font-size: 1.6em;
+    bottom: 60px;
+  }
+  .nav li a {
+    font-size: 25px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+  }
+  .nav {
+    position: fixed;
+  }
+  #contact {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 900px) and (orientation: portrait) {
+  h1 {
+    font-size: 3em;
+    bottom: 120px;
+  }
+  h2 {
+    font-size: 2em;
+    bottom: 80px;
+  }
+  .nav {
+    position: fixed;
+  }
+  #contact {
+    font-size: 2.3em;
+  }
+}
+@media screen and (min-width: 901px) and (orientation: portrait) {
+  h1 {
+    font-size: 4em;
+    bottom: 140px;
+  }
+  h2 {
+    font-size: 3em;
+    bottom: 80px;
+  }
+  .nav {
+    position: fixed;
+  }
+  #contact {
+    font-size: 2.8em;
+  }
+}
+
+/*portrait screen photos*/
+
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+
+  #wedding {
+    background: url(../img/wedding-16x9-500w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #wedding-2 {
+    background: url(../img/wedding-16x9-500w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids {
+    background: url(../img/kids-16x9-500w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids-2 {
+    background: url(../img/kids-16x9-500w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids-3 {
+    background: url(../img/kids-16x9-500w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance {
+    background: url(../img/dance-16x9-500w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance-2 {
+    background: url(../img/dance-16x9-500w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance-3 {
+    background: url(../img/dance-16x9-500w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #nature {
+    background: url(../img/nature-16x9-500w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #nature-2 {
+    background: url(../img/nature-16x9-500w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #nature-3 {
+    background: url(../img/nature-16x9-500w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #portrait {
+    background: url(../img/portrait-16x9-500w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #portrait-2 {
+    background: url(../img/portrait-16x9-500w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #portrait-3 {
+    background: url(../img/portrait-16x9-500w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  #contact {
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 700px) and (orientation: portrait) {
+  #wedding {
+    background: url(../img/wedding-16x9-700w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #wedding-2 {
+    background: url(../img/wedding-16x9-700w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #wedding-3 {
+    background: url(../img/wedding-16x9-700w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids {
+    background: url(../img/kids-16x9-700w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids-2 {
+    background: url(../img/kids-16x9-700w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids-3 {
+    background: url(../img/kids-16x9-700w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance {
+    background: url(../img/dance-16x9-700w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance-2 {
+    background: url(../img/dance-16x9-700w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance-3 {
+    background: url(../img/dance-16x9-700w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  #nature {
+    background: url(../img/nature-16x9-700w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #nature-2 {
+    background: url(../img/nature-16x9-700w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #nature-3 {
+    background: url(../img/nature-16x9-700w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  #portrait {
+    background: url(../img/portrait-16x9-700w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #portrait-2 {
+    background: url(../img/portrait-16x9-700w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #portrait-3 {
+    background: url(../img/portrait-16x9-700w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+
+@media screen and (min-width: 701px) and (orientation: portrait) {
+  #wedding {
+    background: url(../img/wedding-16x9-1080w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #wedding-2 {
+    background: url(../img/wedding-16x9-1080w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #wedding-3 {
+    background: url(../img/wedding-16x9-1080w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids {
+    background: url(../img/kids-16x9-1080w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids-2 {
+    background: url(../img/kids-16x9-1080w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids-3 {
+    background: url(../img/kids-16x9-1080w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance {
+    background: url(../img/dance-16x9-1080w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance-2 {
+    background: url(../img/dance-16x9-1080w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance-3 {
+    background: url(../img/dance-16x9-1080w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  #nature {
+    background: url(../img/nature-16x9-1080w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #nature-2 {
+    background: url(../img/nature-16x9-1080w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #nature-3 {
+    background: url(../img/nature-16x9-1080w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  #portrait {
+    background: url(../img/portrait-16x9-1080w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #portrait-2 {
+    background: url(../img/portrait-16x9-1080w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #portrait-3 {
+    background: url(../img/portrait-16x9-1080w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+
+/*text control on landscape screens*/
+
+@media screen and (orientation: landscape) {
+  h1 {
+    position: fixed;
+  }
+  h2 {
+    position: fixed;
+  }
+
+  h1, h2 {
+    text-align: right;
+  }
+
+  .nav {
+    position: fixed;
+  }
+
+  .nav li {
+    display: inline-block;
+  }
+  .nav li.icon {
+    display: none;
+  }
+
+  #blank {
+  display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+  h1 {
+    bottom: 150px;
+    right: 50px;
+  }
+  h2 {
+    bottom: 110px;
+    right: 50px;
+  }
+
+  .nav {
+    bottom: 50px;
+    right: 50px;
+    width: 430px;
+  }
+
+  .nav li a {
+    padding: 14px 21px;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1600px) and (orientation: landscape) {
+  h1 {
+    bottom: 150px;
+    right: 50px;
+    font-size: 2.6em;
+  }
+  h2 {
+    bottom: 110px;
+    right: 105px;
+    font-size: 1.6em;
+  }
+
+  .nav {
+    bottom: 50px;
+    right: 50px;
+    width: 555px;
+  }
+
+  .nav li a {
+    padding: 10px 27px 20px 27px;
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 1601px) and (orientation: landscape) {
+  h1 {
+    bottom: 150px;
+    right: 50px;
+    font-size: 3.2em;
+  }
+  h2 {
+    bottom: 110px;
+    right: 105px;
+    font-size: 2em;
+  }
+
+  .nav {
+    bottom: 50px;
+    right: 50px;
+    width: 680px;
+  }
+
+  .nav li a {
+    padding: 10px 38px 26px 38px;
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1921px) and (orientation: landscape) {
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    bottom: 150px;
+    margin-right: 10vw;
+    font-size: 3.2em;
+  }
+  h2 {
+    bottom: 110px;
+    margin-right: 10vw;
+    font-size: 2em;
+  }
+
+  .nav {
+    bottom: 50px;
+    margin-right: 10vw;
+    width: 680px;
+  }
+}
+
+/*photos for landscape screens*/
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+
+  #wedding {
+    background: url(../img/wedding-16x10-1200w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #wedding-2 {
+    background: url(../img/wedding-16x10-1200w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids {
+    background: url(../img/kids-16x10-1200w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids-2 {
+    background: url(../img/kids-16x10-1200w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids-3 {
+    background: url(../img/kids-16x10-1200w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance {
+    background: url(../img/dance-16x10-1200w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance-2 {
+    background: url(../img/dance-16x10-1200w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance-3 {
+    background: url(../img/dance-16x10-1200w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #nature {
+    background: url(../img/nature-16x10-1200w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #nature-2 {
+    background: url(../img/nature-16x10-1200w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #nature-3 {
+    background: url(../img/nature-16x10-1200w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  #portrait {
+    background: url(../img/portrait-16x10-1200w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #portrait-2 {
+    background: url(../img/portrait-16x10-1200w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #portrait-3 {
+    background: url(../img/portrait-16x10-1200w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+@media screen and (min-width: 1201px) and (orientation: landscape) {
+
+  #wedding {
+    background: url(../img/wedding-16x10-1920w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #wedding-2 {
+    background: url(../img/wedding-16x10-1920w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids {
+    background: url(../img/kids-16x10-1920w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids-2 {
+    background: url(../img/kids-16x10-1920w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #kids-3 {
+    background: url(../img/kids-16x10-1920w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance {
+    background: url(../img/dance-16x10-1920w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance-2 {
+    background: url(../img/dance-16x10-1920w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #dance-3 {
+    background: url(../img/dance-16x10-1920w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  #nature {
+    background: url(../img/nature-16x10-1920w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #nature-2 {
+    background: url(../img/nature-16x10-1920w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #nature-3 {
+    background: url(../img/nature-16x10-1920w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #portrait {
+    background: url(../img/portrait-16x10-1920w.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #portrait-2 {
+    background: url(../img/portrait-16x10-1920w-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #portrait-3 {
+    background: url(../img/portrait-16x10-1920w-3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1920px) and (orientation: landscape) {
+  .background-photo {
+    width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*modal control*/
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+#modalBox {
+    width: 60vw;
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    transform: 360deg;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 50px;
+    position: absolute;
+    right: -24px;
+    text-align: center;
+    top: -20px;
+    width: 48px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+    background: #00d9ff;
+    transform: rotate(360deg);
+    transition: transform 4s;
+}

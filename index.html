@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.css">
+  <link src="js/jquery-3.1.1.slim.min.js" rel="stylesheet">
+  <link type="text/css" src="./css/bootstrap.min.css">
+  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+  <title>Michael Wiebe Photography</title>
+  <script>
+    function myFunction() {
+    var x = document.getElementById("myNav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+  </script>
+</head>
+<body>
+  <main>
+    <div>
+      <h1>Michael Wiebe Photography </h1>
+    <h2>Photographing beautiful Philadelphia</h2>
+    <ul class="nav" id="myNav">
+        <li id="first-nav"><a href="#events">Events</a></li>
+        <li><a href="#nature">Nature</a></li>
+        <li id="blank"><a href="blank"> </a></li>
+        <li class="icon"> <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+</li>
+        <li><a href="#family">Family</a></li>
+        <li id="last-nav"><a href="#modalScreen">Contact</a></li>
+
+
+    </ul>
+  </div>
+    <div class="background-photo" id="wedding">
+      <p>wedding1</p>
+    </div>
+    <div class="background-photo" id="wedding-2">
+      <<a name="family"></a>
+    </div>
+    <div class="background-photo" id="portrait">
+      <p>portrait</p>
+    </div>
+    <div class="background-photo" id="portrait-2">
+      <p>portrait2</p>
+    </div>
+    <div class="background-photo" id="portrait-3">
+      <p>portrait3</p>
+    </div>
+    <div class="background-photo" id="kids">
+      <p>kids</p>
+    </div>
+    <div class="background-photo" id="kids-2">
+      <p>kids2</p>
+    </div>
+    <div class="background-photo" id="kids-3">
+      <a name="events"></a>
+    </div>
+    <div class="background-photo" id="dance">
+    </div>
+    <div class="background-photo" id="dance-2">
+      <p>dance2</p>
+    </div>
+    <div class="background-photo" id="dance-3">
+      <a name="nature"></a>
+    </div>
+    <div class="background-photo" id="nature">
+      <p>nautre1</p>
+    </div>
+    <div class="background-photo" id="nature-2">
+      <p>nature2</p>
+    </div>
+    <div class="background-photo" id="nature-3">
+      <a name="contact"></a>
+    </div>
+    <div id="contact">
+      <figure id="contact-photo">
+        <img src="img/contact-16x10-1920w.jpg" alt="Me and my son"
+        srcset="img/contact-16x10-500w.jpg 500w, img/contact-16x10-700w.jpg 700w, img/contact-16x10-1080w.jpg 1080w, img/contact-16x10-1200w.jpg 1200w, img/contact-16x10-1920w.jpg 1920w"
+        sizes="100vw">
+        <figcaption>Comments? Questions? <br/> <br/> Shoot me an e-mail at <br/> michaelwiebe.photography@gmail.com</figcaption>
+      </figure>
+      <div id="modalScreen" class="modalDialog">
+          <div id="modalBox">
+              <a href="#close" title="Close" class="close">X</a>
+              <img id="modal-photo" src="img/contact-16x10-500w.jpg" alt="Me and my son">
+              <h2>Modal Box</h2>
+              <p class="modalText">This is a sample modal box that can be created using the powers of CSS3.</p>
+              <p class="modalText">You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+          </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

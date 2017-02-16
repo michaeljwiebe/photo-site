@@ -6,7 +6,7 @@ body {
 
 h1, h2 {
   margin: 3px 0 0 0;
-  font-family: Ariel, sans-serif;
+  font-family: 'Roboto', Ariel, sans-serif;
   width: 100vw;
   text-align: center;
   position: fixed;
@@ -25,6 +25,7 @@ div {
 }
 
 .nav {
+    font-family: 'Roboto', Ariel, sans-serif;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -181,12 +182,12 @@ figcaption {
 
 @media screen and (max-width: 500px) and (orientation: portrait) {
   h1 {
-    font-size: 1.4em;
+    font-size: 1.6em;
     bottom: 80px;
   }
   h2 {
-    font-size: 1em;
-    bottom: 60px;
+    font-size: 1.1em;
+    bottom: 55px;
   }
 
   .nav {
@@ -222,11 +223,11 @@ figcaption {
 
 @media screen and (min-width: 701px) and (max-width: 900px) and (orientation: portrait) {
   h1 {
-    font-size: 3em;
-    bottom: 120px;
+    font-size: 3.5em;
+    bottom: 130px;
   }
   h2 {
-    font-size: 2em;
+    font-size: 2.2em;
     bottom: 80px;
   }
   .nav {
@@ -238,11 +239,11 @@ figcaption {
 }
 @media screen and (min-width: 901px) and (orientation: portrait) {
   h1 {
-    font-size: 4em;
+    font-size: 4.3em;
     bottom: 140px;
   }
   h2 {
-    font-size: 3em;
+    font-size: 2.8em;
     bottom: 80px;
   }
   .nav {
@@ -612,12 +613,12 @@ figcaption {
 
   .nav {
     bottom: 50px;
-    right: 50px;
-    width: 430px;
+    right: 45px;
+    width: 400px;
   }
 
   .nav li a {
-    padding: 14px 21px;
+    padding: 14px 14px;
     font-size: 22px;
   }
 }
@@ -636,11 +637,11 @@ figcaption {
   .nav {
     bottom: 50px;
     right: 50px;
-    width: 555px;
+    width: 515px;
   }
 
   .nav li a {
-    padding: 10px 27px 20px 27px;
+    padding: 10px 19px 20px 20px;
     font-size: 28px;
   }
 }
@@ -659,11 +660,11 @@ figcaption {
   .nav {
     bottom: 50px;
     right: 50px;
-    width: 680px;
+    width: 635px;
   }
 
   .nav li a {
-    padding: 10px 38px 26px 38px;
+    padding: 10px 29px 26px 28px;
     font-size: 32px;
   }
 }
@@ -675,12 +676,12 @@ figcaption {
   }
   h1 {
     bottom: 150px;
-    margin-right: 10vw;
+    margin-right: 11vw;
     font-size: 3.2em;
   }
   h2 {
     bottom: 110px;
-    margin-right: 10vw;
+    margin-right: 11vw;
     font-size: 2em;
   }
 
@@ -907,16 +908,16 @@ figcaption {
 }
 
 #modalBox {
-    width: 60vw;
+    width: 80vw;
     position: relative;
     margin: 10% auto;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     transform: 360deg;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
+    background: rgba(0,0,0,0.2);
+    background: -moz-linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+    background: -webkit-linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+    background: -o-linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6));
 }
 
 .modalDialog {
@@ -951,10 +952,84 @@ figcaption {
     -moz-box-shadow: 1px 1px 3px #000;
     -webkit-box-shadow: 1px 1px 3px #000;
     box-shadow: 1px 1px 3px #000;
+    z-index: 100;
 }
 
 .close:hover {
     background: #00d9ff;
     transform: rotate(360deg);
     transition: transform 4s;
+}
+
+#modalTitle {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+}
+.modalText {
+  text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  #modalTitle {
+    font-size: 1.5em;
+  }
+
+  .modalText {
+    font-size: .8em;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 600px) {
+  #modalTitle {
+    font-size: 2em;
+  }
+
+  .modalText {
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  #modalTitle {
+    font-size: 2.5em;
+  }
+
+  .modalText {
+    font-size: 1.8em;
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  #modalTitle {
+    font-size: 3em;
+  }
+
+  .modalText {
+    font-size: 2.2em;
+  }
+  .close {
+    font-size: 1.6em;
+    line-height: 72px;
+    width: 72px;
+    border-radius: 36px;
+    -webkit-border-radius: 36px;
+    -moz-border-radius: 36px;
+  }
+}
+@media screen and (min-width: 1201px) {
+  #modalTitle {
+    font-size: 4em;
+  }
+
+  .modalText {
+    font-size: 3em;
+  }
+  .close {
+    font-size: 2em;
+    line-height: 96px;
+    width: 96px;
+    border-radius: 48px;
+    -webkit-border-radius: 48px;
+    -moz-border-radius: 489px;
+  }
 }

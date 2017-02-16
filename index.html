@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link src="js/jquery-3.1.1.slim.min.js" rel="stylesheet">
   <link type="text/css" src="./css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Dosis|Roboto" rel="stylesheet">
   <script type="text/javascript" src="./js/bootstrap.min.js"></script>
   <title>Michael Wiebe Photography</title>
   <script>
@@ -22,7 +23,7 @@
 </head>
 <body>
   <main>
-    <div>
+    <div id="header-container">
       <h1>Michael Wiebe Photography </h1>
     <h2>Photographing beautiful Philadelphia</h2>
     <ul class="nav" id="myNav">
@@ -78,21 +79,12 @@
     <div class="background-photo" id="nature-3">
       <a name="contact"></a>
     </div>
-    <div id="contact">
-      <figure id="contact-photo">
-        <img src="img/contact-16x10-1920w.jpg" alt="Me and my son"
-        srcset="img/contact-16x10-500w.jpg 500w, img/contact-16x10-700w.jpg 700w, img/contact-16x10-1080w.jpg 1080w, img/contact-16x10-1200w.jpg 1200w, img/contact-16x10-1920w.jpg 1920w"
-        sizes="100vw">
-        <figcaption>Comments? Questions? <br/> <br/> Shoot me an e-mail at <br/> michaelwiebe.photography@gmail.com</figcaption>
-      </figure>
-      <div id="modalScreen" class="modalDialog">
-          <div id="modalBox">
-              <a href="#close" title="Close" class="close">X</a>
-              <img id="modal-photo" src="img/contact-16x10-500w.jpg" alt="Me and my son">
-              <h2>Modal Box</h2>
-              <p class="modalText">This is a sample modal box that can be created using the powers of CSS3.</p>
-              <p class="modalText">You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
-          </div>
+    <div id="modalScreen" class="modalDialog">
+      <div id="modalBox">
+        <a href="#close" title="Close" class="close">X</a>
+        <h2 id="modalTitle">Contact me!</h2>
+        <p class="modalText">My prices are very reasonable and I would love to work for you.</p>
+        <p class="modalText">Shoot me an e-mail at michaelwiebe.photography@gmail.com</p>
       </div>
     </div>
   </main>
